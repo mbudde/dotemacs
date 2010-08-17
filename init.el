@@ -26,7 +26,7 @@
                 "~/.emacs.d/support/magit"
                 "~/.emacs.d/support/ergoemacs/ergoemacs/ergoemacs-keybindings"
                 "~/.emacs.d/support/ergoemacs/packages"
-                "~/.emacs.d/support/ergoemacs/packages/yasnippet-0.6.1c")
+                "~/.emacs.d/support/yasnippet")
               load-path))
 
 ;; ---------------------------------------------------------
@@ -153,7 +153,7 @@
   (yas/initialize)
   (setq yas/root-directory
         '("~/.emacs.d/snippets"
-          "~/.emacs.d/support/ergoemacs/packages/yasnippet-0.6.1c/snippets"))
+          "~/.emacs.d/support/yasnippet/snippets"))
   (mapcar 'yas/load-directory yas/root-directory)
   (add-to-list 'hippie-expand-try-functions-list 'yas/hippie-try-expand)) ;; Expand snippets with hippie expand
 
