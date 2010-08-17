@@ -1,0 +1,9 @@
+[submodule "support/org-mode"]
+	path = support/org-mode
+	url = git://repo.or.cz/org-mode.git
+[submodule "support/rainbow"]
+	path = support/rainbow
+	url = git://git.naquadah.org/rainbow.git
+[submodule "support/magit"]
+	path = support/magit
+	url = git://github.com/philjackson/magit.git
