@@ -7,3 +7,6 @@
 [submodule "support/magit"]
 	path = support/magit
 	url = git://github.com/philjackson/magit.git
+[submodule "support/ergoemacs"]
+	path = support/ergoemacs
+	url = git://github.com/mbudde/ergoemacs.git
