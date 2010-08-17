@@ -18,14 +18,16 @@
 ;; ---------------------------------------------------------
 ;; load-paths
 
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/ergoemacs")
-(add-to-list 'load-path "~/.emacs.d/org-mode/lisp")
-(add-to-list 'load-path "~/.emacs.d/yasnippet")
-(add-to-list 'load-path "~/.emacs.d/slime")
-(add-to-list 'load-path "~/.emacs.d/ldg-mode")
-(add-to-list 'load-path "~/.emacs.d/jd-el")
-(add-to-list 'load-path "~/.emacs.d/magit")
+(setq load-path
+      (append '("~/.emacs.d"
+                "~/.emacs.d/support"
+                "~/.emacs.d/support/org-mode/lisp"
+                "~/.emacs.d/support/rainbow"
+                "~/.emacs.d/support/magit"
+                "~/.emacs.d/support/ergoemacs/ergoemacs/ergoemacs-keybindings"
+                "~/.emacs.d/support/ergoemacs/packages"
+                "~/.emacs.d/support/ergoemacs/packages/yasnippet-0.6.1c")
+              load-path))
 
 ;; ---------------------------------------------------------
 ;; Required packages
@@ -149,7 +151,9 @@
 ;; Yasnippet
 (when (require 'yasnippet nil 'noerror)
   (yas/initialize)
-  (setq yas/root-directory "~/.emacs.d/yasnippet/snippets")
+  (setq yas/root-directory
+        '("~/.emacs.d/snippets"
+          "~/.emacs.d/support/ergoemacs/packages/yasnippet-0.6.1c/snippets"))
   (yas/load-directory yas/root-directory)
   (add-to-list 'hippie-expand-try-functions-list 'yas/hippie-try-expand)) ;; Expand snippets with hippie expand
 
