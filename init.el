@@ -154,7 +154,7 @@
   (setq yas/root-directory
         '("~/.emacs.d/snippets"
           "~/.emacs.d/support/ergoemacs/packages/yasnippet-0.6.1c/snippets"))
-  (yas/load-directory yas/root-directory)
+  (mapcar 'yas/load-directory yas/root-directory)
   (add-to-list 'hippie-expand-try-functions-list 'yas/hippie-try-expand)) ;; Expand snippets with hippie expand
 
 ;; Org mode
