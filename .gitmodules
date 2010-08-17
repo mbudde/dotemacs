@@ -10,3 +10,6 @@
 [submodule "support/ergoemacs"]
 	path = support/ergoemacs
 	url = git://github.com/mbudde/ergoemacs.git
+[submodule "support/yasnippet"]
+	path = support/yasnippet
+	url = git://github.com/emacsmirror/yasnippet.git
