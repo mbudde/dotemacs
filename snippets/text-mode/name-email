@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: name <email>
+# key: nameemail
+# --
+`user-full-name` <`user-mail-address`>
