@@ -3,6 +3,12 @@
 
 (require 'org-install)
 
+(setq org-modules
+      '(org-docview
+        org-info
+        org-jsinfo
+        org-habit))
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 (setq org-directory "~/Documents/Org"
