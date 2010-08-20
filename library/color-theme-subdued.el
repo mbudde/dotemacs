@@ -122,7 +122,8 @@
      (mode-line (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-buffer-id (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-inactive (:background "#1f1f1f" :foreground ,aluminium4))
-     (minibuffer-prompt (:foreground ,skyblue1))
+     (minibuffer-prompt (:foreground ,skyblue1)
+                        (:foreground ,skyblue2))
      (region (:background "dark slate blue")
              (:background "#ffe0a0"))
 
