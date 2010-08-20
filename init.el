@@ -52,5 +52,6 @@
    "ido-mode"
    "yasnippet"
    "other"
-   "keybinding"))
+   "keybinding"
+   "elpa"))
 
