@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-h") 'beginning-of-line-text)
 (global-set-key (kbd "C-j") 'newline-and-indent)
 (global-set-key (kbd "C-,") 'comment-or-uncomment-current-line-or-region)
+(global-set-key (kbd "C--") 'ido-switch-buffer)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-m") 'transpose-chars)
 (global-set-key (kbd "C-c d") 'copy-line-contents)
