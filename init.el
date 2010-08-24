@@ -41,6 +41,8 @@
 ;; ---------------------------------------------------------
 ;; Load configuration files
 
+(prefer-coding-system 'utf-8)
+
 (load-library "dotemacs")
 (setq dotemacs-children-prefix "~/.emacs.d/children/")
 (dotemacs-load-children
