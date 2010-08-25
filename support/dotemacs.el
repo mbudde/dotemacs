@@ -6,8 +6,8 @@
 
 (defun dotemacs-display-status (status)
   (if status
-      (propertize "OK" 'face "flymake-warnline")
-    (propertize "ERROR" 'face "flymake-errline")))
+      (propertize "OK" 'face "compilation-info")
+    (propertize "ERROR" 'face "compilation-error")))
 
 (defun dotemacs-load-children (dotemacs-children-list)
   (with-current-buffer (get-buffer-create "*Dotemacs Status*")
