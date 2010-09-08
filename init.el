@@ -53,6 +53,7 @@
    "org-mode"
    "ido-mode"
    "yasnippet"
+   "sml-mode"
    "other"
    "keybinding"
    "elpa"))
