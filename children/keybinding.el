@@ -17,7 +17,7 @@
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-M-æ") 'isearch-forward-regexp)
 (global-set-key (kbd "C-M-Æ") 'isearch-backward-regexp)
-(global-set-key (kbd "s-!") 'kill-buffer-and-window)
+(global-set-key (kbd "s-0") 'kill-buffer-and-window)
 
 (when (featurep 'org-install)
   (global-set-key (kbd "C-r") 'org-capture)
