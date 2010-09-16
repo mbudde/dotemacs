@@ -13,3 +13,8 @@
  (lambda ()
    (setq words-include-escape t)))     ; \ loses word break status
             
+(defun sml-find-prev-fun ()
+  (interactive)
+  (save-excursion
+    (when (search-backward-regexp "fun \\((.*?) \\)?\\([[:digit:][:word:]!%&$#+-/:<=>?@\\~`^|*_']+\\)" nil t)
+      (match-string 2))))
