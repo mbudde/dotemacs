@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Function test
+# key: funtest
+# --
+val test${2:$(replace-regexp-in-string "_" "" (capitalize text))}${1:0} = $3${2:`(sml-find-prev-fun)`} $0;
