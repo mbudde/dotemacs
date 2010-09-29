@@ -195,7 +195,11 @@
      ;; sh-mode
      (sh-heredoc (:foreground ,plum1)
                  (:foreground ,plum2))
-     (sh-quoted-exec (:foreground ,orange2)))))
+     (sh-quoted-exec (:foreground ,orange2))
+
+     ;; whitespace-mode
+     (whitespace-line (:foreground "#fff" :background ,scarletred3)
+                      (:foreground "#000" :background ,scarletred1)))))
 
 (setq subdued-light-theme-on nil)
 (defun toggle-subdued-light-theme (arg)

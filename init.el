@@ -54,7 +54,10 @@
    "ido-mode"
    "yasnippet"
    "sml-mode"
+   "whitespace-mode"
    "other"
    "keybinding"
    "elpa"))
 
+
+(put 'narrow-to-region 'disabled nil)
