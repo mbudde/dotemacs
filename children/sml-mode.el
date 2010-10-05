@@ -6,7 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.sig$" . sml-mode))
 
 (setq sml-program-name "mosml"
-      sml-default-arg "-P full"
+      sml-default-arg "-P full -I /home/michael/Code/uni/IP/libs"
       sml-indent-level 2)
 
 (add-hook 'sml-mode-hook
