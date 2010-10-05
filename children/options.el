@@ -9,6 +9,9 @@
 (show-paren-mode 1)
 (column-number-mode 1)
 
+(put 'narrow-to-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)
+
 ;; Use a bar cursor instead of a block when available
 (when (fboundp 'bar-cursor-mode)
   (bar-cursor-mode 1))
