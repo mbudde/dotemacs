@@ -17,6 +17,7 @@
       org-hide-leading-stars t
       org-agenda-ndays 7
       org-deadline-warning-days 14
+      org-agenda-use-time-grid nil
       org-agenda-show-all-dates t
       org-agenda-skip-deadline-if-done t
       org-agenda-skip-scheduled-if-done t
