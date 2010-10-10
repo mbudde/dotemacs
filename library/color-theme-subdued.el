@@ -157,7 +157,7 @@
      (info-xref (:foreground ,skyblue1))
      (info-xref-visited (:foreground ,plum1))
 
-          ;;; AUCTeX
+     ;;; AUCTeX
      (font-latex-sectioning-5-face (:foreground ,butter3 :bold t))
      (font-latex-bold-face (:foreground ,chameleon3 :bold t))
      (font-latex-italic-face (:foreground ,chameleon3 :italic t))
