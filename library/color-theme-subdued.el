@@ -82,7 +82,7 @@
        (cursor-color . ,skyblue1)
        (mouse-color . ,chameleon2))
       ((foreground-color . "#000")
-       (background-color . "#fff")
+       (background-color . "white")
        (background-mode . light)
        (cursor-color . ,skyblue3)
        (mouse-color . ,chameleon2)))
@@ -116,9 +116,9 @@
 
      ;; Emacs Interface
      (fringe (:background "#0f0f0f")
-             (:background "#fff"))
+             (:background "white"))
      (border (:background "#0f0f0f")
-             (:background "#fff"))
+             (:background "white"))
      (mode-line (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-buffer-id (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-inactive (:background "#1f1f1f" :foreground ,aluminium4))
