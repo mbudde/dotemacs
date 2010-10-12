@@ -14,10 +14,6 @@
 (require 'rainbow-mode nil 'noerror)
 (require 'google-maps nil 'noerror)
 
-;; Magit
-(add-to-list 'load-path "~/.emacs.d/support/magit")
-(require 'magit nil 'noerror)
-
 ;; edit-server
 (when (require 'edit-server nil 'noerror)
   (setq edit-server-new-frame nil)

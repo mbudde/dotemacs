@@ -52,6 +52,7 @@
    "mode-hooks"
    "org-mode"
    "ido-mode"
+   "magit"
    "yasnippet"
    "sml-mode"
    "whitespace-mode"
