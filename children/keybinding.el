@@ -24,6 +24,11 @@
   (global-set-key (kbd "C-r") 'org-capture)
   (global-set-key (kbd "C-c a") 'org-agenda))
 
+(when (featurep 'smex)
+  (global-set-key (kbd "M-a") 'smex)
+  (global-set-key (kbd "M-A") 'smex-major-mode-commands)
+  (global-set-key (kbd "C-c M-a") 'execute-extended-command))
+
 (add-hook 'calc-mode-hook
  (lambda ()
    (define-key calc-mode-map (kbd "s-TAB") 'calc-roll-up)))

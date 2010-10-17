@@ -13,3 +13,6 @@
 [submodule "support/yasnippet"]
 	path = support/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
+[submodule "support/smex"]
+	path = support/smex
+	url = git://github.com/nonsequitur/smex.git
