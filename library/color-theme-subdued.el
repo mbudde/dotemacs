@@ -111,7 +111,7 @@
 
      ;; Search
      (isearch (:foreground "#080808" :background ,butter2))
-     (isearch-lazy-highlight-face (:foreground "#080808" :background ,aluminium6)
+     (isearch-lazy-highlight-face (:foreground ,orange1 :background "#1f1f1f")
                                   (:foreground ,aluminium6 :background ,aluminium2))
 
      ;; Emacs Interface
