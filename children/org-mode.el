@@ -7,7 +7,8 @@
       '(org-docview
         org-info
         org-jsinfo
-        org-habit))
+        org-habit
+        org-timer))
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
@@ -24,7 +25,8 @@
       org-agenda-start-on-weekday nil
       org-clock-idle-time 15
       org-fast-tag-selection-single-key 'expert
-      org-clock-in-switch-to-state "STARTED")
+      org-clock-in-switch-to-state "STARTED"
+      org-timer-default-timer 25)
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)"
@@ -38,10 +40,13 @@
         ("CANCELLED" . (:foreground "red" :weight bold))))
 
 (setq org-capture-templates
-      '(("t" "" entry
+      '(("t" "TODO" entry
          (file+headline "todo.org" "Tasks")
          "* TODO %?\n  %u")
-        ("n" "" entry
+        ("u" "Urgent" entry
+         (file+headline "todo.org" "Urgent")
+         "* TODO %?\n  SCHEDULED: %t\n  %u")
+        ("n" "Note" entry
          (file+headline "notes.org" "Notes")
          "* %u %?" :prepend t)))
 
@@ -50,3 +55,12 @@
          ((org-agenda-skip-function
            (lambda nil (org-agenda-skip-entry-if 'scheduled 'deadline)))
           (org-agenda-overriding-header "Unscheduled TODO entries: ")))))
+
+(add-hook 'org-clock-in-hook
+  (lambda ()
+    (when (not org-timer-current-timer)
+      (org-timer-set-timer '(16)))))
+
+(add-hook 'org-timer-done-hook
+  (lambda ()
+    (play-sound-file "~/.emacs.d/children/ding.wav")))
