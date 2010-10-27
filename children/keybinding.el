@@ -31,7 +31,7 @@
 
 (add-hook 'calc-mode-hook
  (lambda ()
-   (define-key calc-mode-map (kbd "s-TAB") 'calc-roll-up)))
+   (define-key calc-mode-map (kbd "<s-tab>") 'calc-roll-up)))
 
 ;; ------------------------------------
 ;; Minor mode for override key bindings
