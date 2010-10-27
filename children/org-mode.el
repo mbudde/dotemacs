@@ -25,27 +25,22 @@
       org-agenda-start-on-weekday nil
       org-clock-idle-time 15
       org-fast-tag-selection-single-key 'expert
-      org-clock-in-switch-to-state "STARTED"
       org-timer-default-timer 25)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s)"
-                  "WAITING(w@)" "APPT(a)" "|"
-                  "DONE(d!)" "DEFERRED(f@)" "CANCELLED(x@)")))
+      '((sequence "TODO(t)" "WAITING(w@)" "APPT(a)" "|"
+                  "DONE(d!)")))
 
 (setq org-todo-keyword-faces
-      '(("TODO" . (:foreground "#ad7fa8" :weight bold))
-        ("STARTED" . (:foreground "orange" :weight bold))
-        ("WAITING" . (:foreground "blue" :weight bold))
-        ("CANCELLED" . (:foreground "red" :weight bold))))
+      '(("TODO" . (:foreground "#ad7fa8" :weight bold))))
 
 (setq org-capture-templates
       '(("t" "TODO" entry
          (file+headline "todo.org" "Tasks")
-         "* TODO %?\n  %u")
+         "* TODO %?\n")
         ("u" "Urgent" entry
-         (file+headline "todo.org" "Urgent")
-         "* TODO %?\n  SCHEDULED: %t\n  %u")
+         (file+headline "todo.org" "Tasks")
+         "* TODO %?\n  SCHEDULED: %t")
         ("n" "Note" entry
          (file+headline "notes.org" "Notes")
          "* %u %?" :prepend t)))
