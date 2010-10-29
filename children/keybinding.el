@@ -24,7 +24,9 @@
 (when (featurep 'org-install)
   (global-set-key (kbd "C-r") 'org-capture)
   (global-set-key (kbd "C-c a") 'org-agenda)
-  (global-set-key (kbd "C-c C-x o") 'org-clock-out))
+  (global-set-key (kbd "C-c C-x C-i") 'org-clock-select-task)
+  (global-set-key (kbd "C-c C-x C-o") 'org-clock-out)
+  (global-set-key (kbd "C-c C-x C-p") 'org-start-pomodoro-break))
 
 (when (featurep 'smex)
   (global-set-key (kbd "M-a") 'smex)

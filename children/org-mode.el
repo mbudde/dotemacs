@@ -59,3 +59,22 @@
 (add-hook 'org-timer-done-hook
   (lambda ()
     (play-sound-file "~/.emacs.d/children/ding.wav")))
+
+(defun org-start-pomodoro-break (arg)
+  (interactive "P")
+  (when (not org-timer-current-timer)
+    (let* ((mins (if arg 25 5))
+           (secs (* mins 60)))
+      (setq org-timer-current-timer
+            (run-with-timer
+             secs nil `(lambda ()
+                         (setq org-timer-current-timer nil)
+                         (org-notify "Break time is up" t)
+                         (setq org-timer-timer-is-countdown nil)
+                         (org-timer-set-mode-line 'off)
+                         (run-hooks 'org-timer-done-hook))))
+      (run-hooks 'org-timer-set-hook)
+      (setq org-timer-timer-is-countdown t
+            org-timer-start-time
+            (time-add (current-time) (seconds-to-time secs)))
+      (org-timer-set-mode-line 'on))))
