@@ -30,3 +30,5 @@
 (add-to-list 'load-path "~/.emacs.d/support/smex")
 (when (require 'smex nil 'noerror)
   (smex-initialize))
+
+(require 'php-mode)
