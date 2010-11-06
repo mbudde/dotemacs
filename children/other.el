@@ -32,3 +32,6 @@
   (smex-initialize))
 
 (require 'php-mode)
+
+(when (featurep 'yaml-mode)
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
