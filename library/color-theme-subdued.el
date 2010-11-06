@@ -102,7 +102,7 @@
                              (:foreground ,orange3))
      (font-lock-function-name-face (:foreground ,butter2)
                                    (:foreground ,butter3))
-     (font-lock-variable-name-face (nil))
+     (font-lock-variable-name-face (:foreground ,chocolate1))
      (font-lock-preprocessor-face (:foreground ,aluminium4))
      (font-lock-constant-face (:foreground ,chameleon1)
                               (:foreground ,chameleon3))
