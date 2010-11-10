@@ -56,6 +56,7 @@
    "yasnippet"
    "sml-mode"
    "whitespace-mode"
+   "zwiebel"
    "other"
    "keybinding"
    "elpa"))
