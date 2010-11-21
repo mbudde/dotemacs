@@ -24,8 +24,7 @@
       org-agenda-skip-scheduled-if-done t
       org-agenda-start-on-weekday nil
       org-clock-idle-time 15
-      org-fast-tag-selection-single-key 'expert
-      org-timer-default-timer 25)
+      org-fast-tag-selection-single-key 'expert)
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w@)" "APPT(a)" "|"
@@ -50,31 +49,3 @@
          ((org-agenda-skip-function
            (lambda nil (org-agenda-skip-entry-if 'scheduled 'deadline)))
           (org-agenda-overriding-header "Unscheduled TODO entries: ")))))
-
-(add-hook 'org-clock-in-hook
-  (lambda ()
-    (when (not org-timer-current-timer)
-      (org-timer-set-timer '(16)))))
-
-(add-hook 'org-timer-done-hook
-  (lambda ()
-    (play-sound-file "~/.emacs.d/children/ding.wav")))
-
-(defun org-start-pomodoro-break (arg)
-  (interactive "P")
-  (when (not org-timer-current-timer)
-    (let* ((mins (if arg 25 5))
-           (secs (* mins 60)))
-      (setq org-timer-current-timer
-            (run-with-timer
-             secs nil `(lambda ()
-                         (setq org-timer-current-timer nil)
-                         (org-notify "Break time is up" t)
-                         (setq org-timer-timer-is-countdown nil)
-                         (org-timer-set-mode-line 'off)
-                         (run-hooks 'org-timer-done-hook))))
-      (run-hooks 'org-timer-set-hook)
-      (setq org-timer-timer-is-countdown t
-            org-timer-start-time
-            (time-add (current-time) (seconds-to-time secs)))
-      (org-timer-set-mode-line 'on))))
