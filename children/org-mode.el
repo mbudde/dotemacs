@@ -13,7 +13,7 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 (setq org-directory "~/Documents/Org"
-      org-agenda-files '("~/Documents/Org/todo.org")
+      org-agenda-files (list org-directory)
       org-default-notes-file "notes.org"
       org-hide-leading-stars t
       org-agenda-ndays 7
@@ -36,13 +36,16 @@
 (setq org-capture-templates
       '(("t" "TODO" entry
          (file+headline "todo.org" "Tasks")
-         "* TODO %?\n")
+         "* TODO %?")
         ("u" "Urgent" entry
          (file+headline "todo.org" "Tasks")
          "* TODO %?\n  SCHEDULED: %t")
         ("n" "Note" entry
          (file+headline "notes.org" "Notes")
-         "* %u %?" :prepend t)))
+         "* %u %?" :prepend t)
+        ("v" "ViewWorld" entry
+         (file "viewworld.org")
+         "* TODO %?" :prepend t)))
 
 (setq org-agenda-custom-commands
       '(("u" alltodo ""
