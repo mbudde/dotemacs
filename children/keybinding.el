@@ -24,9 +24,8 @@
 (when (featurep 'org-install)
   (global-set-key (kbd "C-r") 'org-capture)
   (global-set-key (kbd "C-c a") 'org-agenda)
-  (global-set-key (kbd "C-c C-x C-i") 'org-clock-select-task)
-  (global-set-key (kbd "C-c C-x C-o") 'org-clock-out)
-  (global-set-key (kbd "C-c C-x C-p") 'org-start-pomodoro-break))
+  (global-set-key (kbd "C-c C-x C-i") 'org-clock-in)
+  (global-set-key (kbd "C-c C-x C-o") 'org-clock-out))
 
 (when (featurep 'zwiebel)
   (global-set-key (kbd "C-c z") 'zwiebel-dwim))
