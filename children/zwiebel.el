@@ -3,7 +3,8 @@
 
 (require 'zwiebel)
 
-(setq zwiebel-ask-for-task nil)
+(setq zwiebel-ask-for-task nil
+      zwiebel-show-seconds t)
 
 (add-hook 'zwiebel-complete-hook
   (lambda ()
