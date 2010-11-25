@@ -4,8 +4,8 @@
 
 (defun magit-log-1 (commit)
   (let ((args '("log" "-1" "--format=%s")))
-    (if (eq commit nil)
-        (apply 'magit-git-string (append args '(commit)))
+    (if (not (eq commit nil))
+        (apply 'magit-git-string (append args (list commit)))
       (apply 'magit-git-string args))))
 
 (defun magit-commit-fixup (commit)
