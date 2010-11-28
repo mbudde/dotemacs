@@ -35,3 +35,6 @@
 
 (when (featurep 'yaml-mode)
   (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
+
+(when (require 'csharp-mode nil 'noerror)
+  (add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode)))
