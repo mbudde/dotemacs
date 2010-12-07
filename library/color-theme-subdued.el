@@ -119,7 +119,7 @@
              (:background "white"))
      (border (:background "#0f0f0f")
              (:background "white"))
-     (mode-line (:background "#1f1f1f" :foreground ,aluminium1))
+     (mode-lien (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-buffer-id (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-inactive (:background "#1f1f1f" :foreground ,aluminium4))
      (minibuffer-prompt (:foreground ,skyblue1)
@@ -133,11 +133,13 @@
      (show-paren-mismatch (:foreground ,aluminium1 :background ,scarletred3)
                           (:foreground ,aluminium1 :background ,scarletred2))
 
-     ;; Line highlighting
+     ;; Line highlighting and numbering
      (highlight (:background "#1f1f1f" :foreground nil)
                 (:background ,skyblue1 :foreground nil))
      (highlight-current-line-face (:background "#1f1f1f" :foreground nil)
                                   (:background ,skyblue1 :foreground nil))
+     (linum (:foreground ,aluminium6)
+            (:foreground ,aluminium3))
 
      ;; Diff mode
      (diff-added (:foreground ,chameleon3))

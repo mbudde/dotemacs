@@ -57,6 +57,7 @@
    "sml-mode"
    "whitespace-mode"
    "zwiebel"
+   "linum"
    "other"
    "keybinding"
    "elpa"))
