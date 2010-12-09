@@ -119,7 +119,7 @@
              (:background "white"))
      (border (:background "#0f0f0f")
              (:background "white"))
-     (mode-lien (:background "#1f1f1f" :foreground ,aluminium1))
+     (mode-line (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-buffer-id (:background "#1f1f1f" :foreground ,aluminium1))
      (mode-line-inactive (:background "#1f1f1f" :foreground ,aluminium4))
      (minibuffer-prompt (:foreground ,skyblue1)
