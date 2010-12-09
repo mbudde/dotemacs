@@ -2,6 +2,6 @@
 # name: \begin{equation*}
 # key: equation
 # --
-\begin{${1:$$(yas/choose-value '("equation" "align" "alignat" "multline"))}${2:*}}
+\begin{${1:$$(yas/choose-value '("equation" "align" "alignat" "multline" "gather"))}${2:*}}
   $0
 \end{$1$2}
