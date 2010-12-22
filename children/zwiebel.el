@@ -4,7 +4,9 @@
 (require 'zwiebel)
 
 (setq zwiebel-ask-for-task nil
-      zwiebel-show-seconds t)
+      zwiebel-show-seconds t
+      zwiebel-work-minutes 50
+      zwiebel-break-minutes 10)
 
 (add-hook 'zwiebel-complete-hook
   (lambda ()
