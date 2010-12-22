@@ -27,11 +27,15 @@
       org-fast-tag-selection-single-key 'expert)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAITING(w@)" "APPT(a)" "|"
-                  "DONE(d!)")))
+      '((sequence "TODO(t)" "STARTED(s)"
+                  "WAITING(w@)" "APPT(a)" "|"
+                  "DONE(d!)" "DEFERRED(f@)" "CANCELLED(x@)")))
 
 (setq org-todo-keyword-faces
-      '(("TODO" . (:foreground "#ad7fa8" :weight bold))))
+      '(("TODO" . (:foreground "#ad7fa8" :weight bold))
+        ("STARTED" . (:foreground "orange" :weight bold))
+        ("WAITING" . (:foreground "blue" :weight bold))
+        ("CANCELLED" . (:foreground "red" :weight bold))))
 
 (setq org-capture-templates
       '(("t" "TODO" entry
