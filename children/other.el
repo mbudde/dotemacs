@@ -38,3 +38,6 @@
 
 (when (require 'csharp-mode nil 'noerror)
   (add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode)))
+
+(when (require 'xquery-mode nil 'noerror)
+  (add-to-list 'auto-mode-alist '("\\.xql$" . xquery-mode)))
