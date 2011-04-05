@@ -41,3 +41,5 @@
 
 (when (require 'xquery-mode nil 'noerror)
   (add-to-list 'auto-mode-alist '("\\.xql$" . xquery-mode)))
+
+(require 'color-theme-solarized nil 'noerror)
