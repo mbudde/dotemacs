@@ -18,4 +18,4 @@
 	url = git://github.com/mbudde/smex.git
 [submodule "support/zwiebel"]
 	path = support/zwiebel
-	url = git@github.com:mbudde/zwiebel.git
+	url = git://github.com/mbudde/zwiebel.git
