@@ -56,5 +56,7 @@
 
 (setq inferior-lisp-program "clisp")
 
+(setq tramp-default-method "ssh")
+
 ;; Auto-mode
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
