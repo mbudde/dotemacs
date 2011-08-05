@@ -18,7 +18,6 @@
 
 (setq inhibit-startup-message t)
 (setq diff-switches "-u")               ;; Default to unified diff
-(setq c-default-style '((c-mode . "k&r")))
 
 ;; Don't pollute my folders with backup files
 (setq make-backup-files nil

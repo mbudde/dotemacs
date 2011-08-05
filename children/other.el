@@ -43,3 +43,6 @@
   (add-to-list 'auto-mode-alist '("\\.xql$" . xquery-mode)))
 
 (require 'color-theme-solarized nil 'noerror)
+
+(require 'google-c-style nil 'noerror)
+;; (add-hook 'c-mode-common-hook 'google-set-c-style)
