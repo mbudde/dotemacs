@@ -55,6 +55,7 @@
    "magit"
    "yasnippet"
    "sml-mode"
+   "vala-mode"
    "whitespace-mode"
    "zwiebel"
    "linum"
